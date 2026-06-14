@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Claude Usage</title>
+  <link rel="stylesheet" href="widget.css" />
+</head>
+<body>
+  <div class="card">
+    <div class="header">
+      <span class="title">Claude Usage</span>
+      <button id="refreshBtn" title="Refresh now">&#x21bb;</button>
+    </div>
+
+    <div id="loadingView" class="state">
+      <p>Loading usage data&hellip;</p>
+    </div>
+
+    <div id="loginView" class="state hidden">
+      <p>Sign in to Claude.ai to see your usage.</p>
+      <button id="loginBtn">Sign in</button>
+    </div>
+
+    <div id="errorView" class="state hidden">
+      <p id="errorText">Something went wrong.</p>
+      <button id="retryBtn">Retry</button>
+    </div>
+
+    <div id="usageView" class="state hidden">
+      <div class="meter">
+        <div class="meter-label">
+          <span>Session (5h)</span>
+          <span id="fiveHourPct">--%</span>
+        </div>
+        <div class="bar"><div id="fiveHourBar" class="bar-fill"></div></div>
+        <div class="meter-sub" id="fiveHourReset">--</div>
+      </div>
+
+      <div class="meter">
+        <div class="meter-label">
+          <span>Weekly (7d)</span>
+          <span id="sevenDayPct">--%</span>
+        </div>
+        <div class="bar"><div id="sevenDayBar" class="bar-fill"></div></div>
+        <div class="meter-sub" id="sevenDayReset">--</div>
+      </div>
+
+      <div class="org" id="orgName"></div>
+    </div>
+
+    <div class="footer">
+      <span id="lastUpdated"></span>
+    </div>
+  </div>
+
+  <script src="widget.js"></script>
+</body>
+</html>

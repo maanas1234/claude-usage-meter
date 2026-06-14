@@ -1,0 +1,37 @@
+{
+  "name": "claude-usage-meter",
+  "version": "1.0.0",
+  "private": true,
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --win"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "Desktop widget that shows your Claude.ai session and weekly usage limits.",
+  "devDependencies": {
+    "electron": "^42.4.0",
+    "electron-builder": "^26.15.3"
+  },
+  "build": {
+    "appId": "com.example.claudeusagemeter",
+    "productName": "Claude Usage Meter",
+    "files": [
+      "main.js",
+      "preload.js",
+      "widget.html",
+      "widget.css",
+      "widget.js",
+      "assets/**/*"
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "assets/icon.png"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    }
+  }
+}
