@@ -4,6 +4,8 @@ A small Windows tray app that shows your Claude.ai chat usage: how much of your
 **5-hour session limit** and **weekly (7-day) limit** you've used, and when each
 resets.
 
+<img src="app/assets/Screenshot 2026-06-15 022525.png">
+
 ## How it works
 
 - The app keeps a hidden, persistent browser session signed in to claude.ai
