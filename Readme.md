@@ -6,6 +6,8 @@ resets.
 
 <img src="app/assets/Screenshot 2026-06-15 022525.png">
 
+
+<img src="app/assets/Screenshot 2026-06-15 022740.png">
 ## How it works
 
 - The app keeps a hidden, persistent browser session signed in to claude.ai
